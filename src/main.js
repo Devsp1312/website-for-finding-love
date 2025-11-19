@@ -1,3 +1,5 @@
+console.log('main.js loaded');
+
 // Scroll Reveal Animation
 const observerOptions = {
   root: null,
@@ -15,6 +17,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOMContentLoaded — initializing scroll reveal');
   const revealElements = document.querySelectorAll('.scroll-reveal');
   revealElements.forEach(el => observer.observe(el));
 });
