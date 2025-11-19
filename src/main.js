@@ -1,5 +1,3 @@
-import './style.css'
-
 // Scroll Reveal Animation
 const observerOptions = {
   root: null,
