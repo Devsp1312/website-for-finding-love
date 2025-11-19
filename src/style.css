@@ -143,7 +143,7 @@ a:hover {
 
 /* Hero */
 .hero {
-  height: 100vh;
+  height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,13 +213,13 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   border: 2px solid var(--accent-primary);
-  opacity: 0;
-  animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  box-shadow: 0 0 20px var(--accent-glow), inset 0 0 20px var(--accent-glow);
+  opacity: 0.06;
+  animation: pulse 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 40px var(--accent-glow), inset 0 0 20px var(--accent-glow);
 }
 
 .pulse-circle.delay-1 {
@@ -242,9 +242,9 @@ a:hover {
 
 @keyframes pulse {
   0% {
-    width: 100px;
-    height: 100px;
-    opacity: 0;
+    width: 140px;
+    height: 140px;
+    opacity: 0.12;
     border-width: 2px;
   }
 
@@ -253,11 +253,30 @@ a:hover {
   }
 
   100% {
-    width: 1000px;
-    height: 1000px;
+    width: 900px;
+    height: 900px;
     opacity: 0;
     border-width: 0px;
   }
+}
+
+/* Provide scroll offset so fixed navbar doesn't hide anchors */
+section {
+  scroll-margin-top: 88px;
+}
+
+/* Mission-specific background to separate from hero */
+.mission-bg {
+  background-color: var(--bg-card);
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+/* Make mission text slightly brighter on the card background */
+.mission-bg .text-block p,
+.mission-bg .text-block ul {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
 }
 
 /* Grid & Cards */
